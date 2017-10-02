@@ -1,0 +1,54 @@
+.idea/
+*.pyc
+._*
+*.DS_Store
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+.dep
+build
+
+# XML
+*.xml
+
+# Precompiled Headers
+*.gch
+*.ch
+
+# Libraries
+*.lib
+*.a
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+
+# Wiki
+*wiki
+
+*~
+server/log

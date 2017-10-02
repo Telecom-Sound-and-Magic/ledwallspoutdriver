@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ledWallWindows" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/ledWallWindows" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="lib" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add option="-lwsock32 -lws2_32" />
+			<Add library="lib/SpoutLibrary.lib" />
+			<Add library="opengl32" />
+			<Add library="glu32" />
+			<Add library="gdi32" />
+			<Add library="mingw32" />
+			<Add library="lib/libSDL.dll.a" />
+		</Linker>
+		<Unit filename="include/LedWall.h" />
+		<Unit filename="include/LineOfPixels.h" />
+		<Unit filename="include/Slab.h" />
+		<Unit filename="include/SpoutLibrary.h" />
+		<Unit filename="include/opengl.h" />
+		<Unit filename="src/LedWall.cpp" />
+		<Unit filename="src/LineOfPixels.cpp" />
+		<Unit filename="src/Slab.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/opengl.cpp" />
+		<Extensions>
+			<code_completion>
+				<search_path add="C:\Program Files\Microsoft SDKs\Windows\v7.0A\Include" />
+			</code_completion>
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
