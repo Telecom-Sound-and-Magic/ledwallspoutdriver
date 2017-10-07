@@ -18,10 +18,6 @@ build
 *.gch
 *.ch
 
-# Libraries
-*.lib
-*.a
-
 # Precompiled Headers
 *.gch
 *.pch
@@ -31,7 +27,6 @@ build
 *.lo
 
 # Shared objects (inc. Windows DLLs)
-*.dll
 *.so
 *.so.*
 *.dylib

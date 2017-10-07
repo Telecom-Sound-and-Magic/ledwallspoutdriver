@@ -477,3 +477,242 @@
 	<fstream>
 	<sstream>
 
+1507378421 source:c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\src\ledwall.cpp
+	"../include/LedWall.h"
+	<iostream>
+	<GL/gl.h>
+	<GL/glu.h>
+	<SDL/SDL.h>
+	<mutex>
+	<winsock2.h>
+	"opengl.h"
+	<fstream>
+	<sstream>
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\ledwall.h
+	"Slab.h"
+	<vector>
+	"SpoutLibrary.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\slab.h
+	"LineOfPixels.h"
+	<vector>
+	<winsock2.h>
+	<string>
+	<thread>
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\lineofpixels.h
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\spoutlibrary.h
+	<windows.h>
+	<GL/GL.h>
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl.h
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_dreamcast.h"
+	"SDL_config_macos.h"
+	"SDL_config_macosx.h"
+	"SDL_config_symbian.h"
+	"SDL_config_win32.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_platform.h
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_config_win32.h
+	"SDL_platform.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\begin_code.h
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\close_code.h
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_keysym.h
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1507378176 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\sdl\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1507378177 c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\include\opengl.h
+	<SDL/SDL.h>
+
+1507378177 source:c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\src\lineofpixels.cpp
+	"../include/LineOfPixels.h"
+
+1507378878 source:c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\src\main.cpp
+	<iostream>
+	"../include/LedWall.h"
+	<thread>
+	<mutex>
+
+1507378177 source:c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\src\opengl.cpp
+	"opengl.h"
+	<SDL/SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdio.h>
+	<stdlib.h>
+
+1507378177 source:c:\users\piotr\documents\ledwallspoutdriver\ledwallwindows\src\slab.cpp
+	"../include/Slab.h"
+	<iostream>
+	<stdio.h>
+	<thread>
+	<sstream>
+

@@ -76,29 +76,6 @@ void LedWall::run(int fps)
 {
     setFps(fps);
     int oldTime = 0, newTime = 0;
-    //SDL_Init(SDL_INIT_VIDEO);
-    //SDL_WM_SetCaption("LedWall",NULL);
-    //SDL_SetVideoMode(640,480, 32, SDL_OPENGL);
-    //SDL_WM_IconifyWindow();
-    //m_ok = true;
-    //SDL_Event event;
-    /*std::cout << "Begining of streaming..." << std::endl;
-    while (m_ok)
-    {
-        SDL_PollEvent(&event);
-        switch(event.type)
-        {
-        case SDL_QUIT:
-            m_ok = false;
-        }
-        newTime = SDL_GetTicks();
-        if(newTime - oldTime > m_delay)
-        {
-            oldTime = newTime;
-            nextImage();
-        }
-    }
-    SDL_Quit();*/
 
     /* Information about the current video settings. */
     const SDL_VideoInfo* info = NULL;
@@ -147,25 +124,6 @@ void LedWall::run(int fps)
         {
             oldTime = newTime;
             nextImage();
-        }
-    }
-}
-
-void LedWall::runDisplay()
-{
-    int panel = m_numPanel;
-    m_numPanel++;
-    int oldTime = 0, newTime = 0;
-    std::cout << "panel num : " << panel << std::endl;
-    std::cout << "salut";
-    mtx.unlock();
-    while(m_ok)
-    {
-        newTime = SDL_GetTicks();
-        if(newTime - oldTime > m_delay)
-        {
-            oldTime = newTime;
-            m_slabs[panel]->sendFrame(senderbuffer, m_width, m_height, 0);
         }
     }
 }
