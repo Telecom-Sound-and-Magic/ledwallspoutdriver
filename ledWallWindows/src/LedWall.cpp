@@ -276,6 +276,19 @@ void LedWall::send_sync_signal(char frame_to_show)
         std::cout << "error while sending broadcast message" << std::endl;
     }
 }
+void LedWall::send_command(char command)
+{
+    char buffer[3];
+    buffer[0] = command;
+    buffer[1] = command;
+    buffer[2] = '\0';
+    int sendStringLen = strlen(buffer);
+    if(sendto(m_sock,buffer,sendStringLen,0,(SOCKADDR*)&m_sin, sizeof(m_sin)) != sendStringLen)
+    {
+        std::cout << "error while sending broadcast message" << std::endl;
+    }
+}
+
 
 bool LedWall::initSpout()
 {

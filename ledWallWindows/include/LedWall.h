@@ -22,6 +22,7 @@ public:
     int getFps() const { return m_fps; }
     int numberPanels() const { return (int) m_slabs.size(); }
     void send_sync_signal(char frame_to_show);
+    void send_command(char command);
     void connect_broadcast();
     void load_config();
 

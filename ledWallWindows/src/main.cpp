@@ -37,6 +37,12 @@ int main(int argc, char *argv[])
             "* help : affiche les commandes disponibles" << std::endl <<
             "* fps : affiche le nombre de fps" << std::endl <<
             "* setfps : permet de changer le nombre de fps" << std::endl;
+            "* shownumber : permet d'afficher le numero de chaque dalle" << std::endl;
+            "* showversion : permet d'afficher la version du firmware de chaque dalle" << std::endl;
+            "* live : permet de retourner a l'affichage live" << std::endl;
+            "* restart : permet de redémarrer le color-serveur sur chaque dalle" << std::endl;
+            "* reboot : permet de redémarrer complètement le mur de led" << std::endl;
+
         }
         else if(commande == "fps")
         {
@@ -49,6 +55,31 @@ int main(int argc, char *argv[])
             std::cin >> fps;
             ledWall.setFps(fps);
             std::cout << "Le frame rate a ete change" << std::endl;
+        }
+        else if(commande == "shownumber")
+        {
+        	ledwall.send_command('n');
+        	std::cout << "Commande d'affichage des numéros de dalles envoyée" << std::endl;
+        }
+        else if(commande == "showversion")
+        {
+        	ledwall.send_command('v');
+        	std::cout << "Commande d'affichage des versions des dalles envoyée" << std::endl;
+        }
+        else if(commande == "live")
+        {
+        	ledwall.send_command('l');
+        	std::cout << "Commande d'affichage live envoyée" << std::endl;
+        }
+        else if(commande == "restart")
+        {
+        	ledwall.send_command('s');
+        	std::cout << "Commande de redémarrage des color-serveurs envoyée" << std::endl;
+        }
+        else if(commande == "reboot")
+        {
+        	ledwall.send_command('r');
+        	std::cout << "Commande de redémarrage du mur de led envoyée" << std::endl;
         }
         else
         {
