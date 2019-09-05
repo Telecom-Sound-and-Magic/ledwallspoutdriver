@@ -16,7 +16,7 @@ std::mutex mtx;
 std::mutex ready;
 
 const static int broadcast_port = 8888;
-const static std::string broadcast_address = "192.168.1.255";
+const static char broadcast_address[] = "192.168.1.255";
 const static unsigned char frames_in_buffer = 1;
 using namespace std;
 int broadcastPermission = 1;
@@ -217,10 +217,17 @@ void LedWall::connect_broadcast()
     {
         cout << "error changing to broadcast" << endl;
     }
-    memset(&m_sin,0,sizeof(broadcast_address.c_str()));
-    m_sin.sin_addr.s_addr = inet_addr(broadcast_address.c_str());
+
+
+
+    memset(&m_sin,0,sizeof(broadcast_address));
+    m_sin.sin_addr.s_addr = inet_addr(broadcast_address);
     m_sin.sin_family = AF_INET;
     m_sin.sin_port = htons(broadcast_port);
+
+    int res = bind(m_sock, (SOCKADDR *)&m_sin, sizeof(m_sin));
+    if (res != 0)
+        std::cout << "Erreur bind" << std::endl;
 }
 
 void LedWall::send_sync_signal(char frame_to_show)
@@ -229,19 +236,23 @@ void LedWall::send_sync_signal(char frame_to_show)
     buffer[0] = frame_to_show;
     buffer[1] = '\0';
     int sendStringLen = strlen(buffer);
-    if(sendto(m_sock,buffer,sendStringLen,0,(SOCKADDR*)&m_sin, sizeof(m_sin)) != sendStringLen)
+    if(sendto(m_sock,buffer,sendStringLen,0,reinterpret_cast<const sockaddr*>(&m_sin), sizeof(m_sin)) != sendStringLen)
     {
         std::cout << "error while sending broadcast message" << std::endl;
     }
 }
 void LedWall::send_command(char command)
 {
-    char buffer[3];
+    char buffer[2];
     buffer[0] = command;
-    buffer[1] = command;
-    buffer[2] = '\0';
+    buffer[1] = '\0';
     int sendStringLen = strlen(buffer);
-    if(sendto(m_sock,buffer,sendStringLen,0,(SOCKADDR*)&m_sin, sizeof(m_sin)) != sendStringLen)
+    if(sendto(m_sock,buffer,sendStringLen,0,reinterpret_cast<const sockaddr*>(&m_sin), sizeof(m_sin)) != sendStringLen)
+    {
+        std::cout << "error while sending broadcast message" << std::endl;
+    }
+
+    if(sendto(m_sock,buffer,sendStringLen,0,reinterpret_cast<const sockaddr*>(&m_sin), sizeof(m_sin)) != sendStringLen)
     {
         std::cout << "error while sending broadcast message" << std::endl;
     }
