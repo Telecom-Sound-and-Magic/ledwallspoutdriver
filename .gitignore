@@ -47,3 +47,6 @@ build
 
 *~
 server/log
+ledWallWindows/ledWallWindows.layout
+ledWallWindows/ledWallWindows.depend
+ledWallWindows/bin/Release/config.txt

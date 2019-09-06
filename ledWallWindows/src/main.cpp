@@ -28,7 +28,8 @@ int main(int argc, char *argv[])
             "* showversion : permet d'afficher la version du firmware de chaque dalle" << std::endl <<
             "* live : permet de retourner a l'affichage live" << std::endl <<
             "* restart : permet de redémarrer le color-serveur sur chaque dalle" << std::endl <<
-            "* reboot : permet de redémarrer complètement le mur de led" << std::endl;
+            "* reboot : permet de redémarrer complètement le mur de led" << std::endl <<
+            "* shutdown : commande d'extinction du mur de led" << std::endl;
 
         }
         else if(commande == "fps")
@@ -67,6 +68,12 @@ int main(int argc, char *argv[])
         {
         	ledWall.send_command('r');
         	std::cout << "Commande de redémarrage du mur de led envoyée" << std::endl;
+        }
+
+        else if(commande == "shutdown")
+        {
+        	ledWall.send_command('p');
+        	std::cout << "Commande d'extinction du mur de led envoyée" << std::endl;
         }
         else
         {
